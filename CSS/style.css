@@ -1,0 +1,475 @@
+:root {
+    --main-color :#343434;
+    --text-color : #FFF;
+    --backgrount-section :#F7F7F7;
+
+    --dev-letter : 9 ;
+    --des-letter : 8 ;
+    --lar-letter : 16;
+}
+
+h1 , h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+p , a {
+    font-family: 'Poppins', sans-serif !important;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.background-section {
+    background-color: var(--backgrount-section);
+}
+
+/* ----------start title------------------------- */
+
+.section-title .dot-title {
+    position: relative;
+}
+
+.section-title .dot-title::before {
+    content: "";
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    top: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 25px;
+    z-index: 1;
+}
+
+.section-title .dot-title h3 {
+    font-size: 40px;
+    color: var(--main-color);
+    position: relative;
+    z-index: 2;
+}
+
+/* ----------End title------------------------- */
+
+/* <!--===================== start header ====================--> */
+
+header {
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.594), rgba(0, 0, 0, 0.671)),url('../imgs/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* 
+#home .navbar-nav li a .active::before {
+    width: 80%;
+    background-color: var(--main-color);
+} */
+
+
+#home .nav-item .active {
+    color: rgb(130, 53, 94) !important;
+    font-weight: bold ;
+}
+
+header .navbar-nav li a.active::before {
+    width: 80%;
+}
+
+.navbar-nav  li a {
+    position: relative;
+}
+
+header .navbar-nav li a::before {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    width: 0%;
+    height: 2px;
+    left: 5px;
+    bottom: 4px;
+    transition: width 1s;
+}
+
+header .navbar-nav li a:hover {
+    color: #000;
+}
+
+header .navbar-nav li a:hover::before {
+    width: 80%;
+}
+
+header .text-h5-header {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+header .text-h1-header {
+    font-size: 60px;
+    font-weight: 200;
+    /* background-color: #000; */
+}
+
+
+header ul li {
+    padding-right: 10px;
+}
+
+header ul .brand {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.219);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* <!--===================== End header ====================--> */
+
+/* <!--===================== start about ====================--> */
+
+#about .dot {
+    position: relative;
+}
+
+
+#about .dot::after {
+    content: "";
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    /* background-position: center;
+    background-size: cover; */
+    background-repeat: repeat;
+    left: 0px;
+    bottom: -30px;
+    width: 80%;
+    height: 80%;
+    z-index: -1;
+}
+
+#about .div-pro .item-pro {
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    /* box-shadow: (inset 3px 10px 7px rgba(0, 0, 0, 0.42)); */
+    box-shadow:
+    inset 2px 3px 10px rgba(17, 18, 17, 0.3),
+    0 0 0 2px white,
+    0 0 0 rgba(243, 242, 242, 0.6);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#about .div-pro .item-pro h6 {
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+#about .div-pro .item-pro .color-95 {
+    width: 95%;
+}
+#about .div-pro .item-pro .color-80 {
+    width: 80%;
+}
+#about .div-pro .item-pro .color-90 {
+    width: 90%;
+}
+
+#about .div-pro .item-pro .color-95,
+#about .div-pro .item-pro .color-80,
+#about .div-pro .item-pro .color-90
+ {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+#about .click button {
+    padding: 10px 30px;
+    font-size: 14px;
+}
+
+#about .click .btn-lig {
+    border: 1px solid var(--main-color);
+    background-color: #000;
+    color: var(--text-color);
+    transition: all 1s;
+}
+
+#about .click .btn-lig:hover {
+    background-color: var(--text-color) !important;
+    color: var(--main-color);
+}
+
+/* <!--===================== End about ====================--> */
+
+/* <!--===================== start Services ====================--> */
+
+.inner .icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c6c4c4;
+}
+
+.inner .icon i {
+    font-size: 22px;
+}
+
+.inner:hover .icon {
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.inner:hover i {
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* <!--===================== End Services ====================--> */
+
+/* <!--===================== start Portfolio ====================--> */
+
+#works .tab-color {
+    color: var(--main-color);
+}
+
+#works .tab-color li button.active::before {
+    width: 50%;
+}
+
+.tab-color  li button {
+    position: relative;
+}
+
+#works .tab-color li button::before {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    width: 0%;
+    height: 2px;
+    left: 15px;
+    bottom: 4px;
+    transition: width 1s;
+}
+
+#works .tab-color li button:hover {
+    color: #000;
+}
+
+#works .tab-color li button:hover::before {
+    width: 50%;
+}
+
+#works li button {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#works .tab-content .overlay {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    bottom: 0px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.863);
+    opacity: 0;
+    transition: opacity 1s , top 0.5s , bottom 0.5s;
+}
+
+#works .tab-content .overlay:hover {
+    opacity: 1;
+    top: 4px;
+    bottom: 5px;
+}
+
+#works .overlay .overicon .over-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+#works .overlay .overicon .over-icon:hover {
+    cursor: pointer;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* <!--===================== End Portfolio ====================--> */
+
+/* <!--===================== start Testimonials ====================--> */
+
+#clients .carousel-item img {
+    width: 10%;
+}
+
+.carousel-indicators {
+    position: absolute !important; 
+    bottom: -50px;
+}
+
+
+#carouselExampleDark .carousel-indicators button.active {
+    width: 20px;
+    opacity: 1;
+    height: 6px;
+    border-radius: 20px;
+    border: 1px solid var(--main-color);
+}
+
+#carouselExampleDark .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    opacity: 0.5;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+}
+
+
+
+/* <!--===================== End Testimonials ====================--> */
+
+/* <!-- =============start Icon============== --> */
+
+.section-icon {
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.box-icons {
+    color: var(--main-color);
+}
+
+/* <!-- =============End Icon============== --> */
+
+/* <!--===================== start Team ====================--> */
+
+.bg-color-info {
+    background-color: #5B5B5B;
+}
+
+#team .over-tem {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.863);
+    opacity: 0;
+    transition:  transform 1s 0.5ms , opacity 1s 0.5ms;
+    z-index: 999;
+}
+
+#team .inerr-info:hover .over-tem {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+#team .over-tem ul li {
+    padding-left: 20px;
+    list-style: none !important;
+}
+
+#team .over-tem ul li .icon-tem {
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+#team .over-tem ul .icon-tem i {
+    color: var(--text-color);
+    transition: all 0.5s;
+}
+
+#team .over-tem ul a:hover .icon-tem ,
+#team .over-tem a:hover i {
+    background-color: var(--text-color);
+    color: var(--main-color);
+}
+
+#team .over-tem ul a:hover .icon-tem {
+    border: 1px solid var(--main-color);
+}
+
+#team .inerr-info .img:hover img {
+    transform: scale(1.5);
+    overflow: hidden;
+}
+
+/* <!--===================== End Team ====================--> */
+
+/* <!--===================== start Contact ====================--> */
+
+.inner-contact .icon-contact {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c6c4c4;
+    transition: all 1s;
+}
+
+.inner-contact .icon-contact i {
+    font-size: 22px;
+}
+
+.inner-contact:hover .icon-contact {
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.inner-contact:hover i {
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#contact input, textarea {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+#contact button:hover {
+    background-color: var(--text-color);
+    color: var(--main-color);
+}
+
+/* <!--===================== End Contact ====================--> */
+
+
+/* <!--===================== start footer ====================--> */
+
+footer {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+footer p {
+    font-size: 14px;
+    color: #748182;
+    font-weight: 400;
+}
+
+/* <!--===================== End footer ====================--> */
